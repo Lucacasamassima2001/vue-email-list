@@ -20,6 +20,8 @@
 
 // Tramite una chiamata ad una API, stampiamo a schermo un numero casuale.
 
+// CREO UN ARRAY IN CUI INSERIRE I DATI RICEVUTI
+
 const app = Vue.createApp({
 	data() {
 		return {
@@ -28,6 +30,9 @@ const app = Vue.createApp({
             ],
 		}
 	},
+
+	// METODO PER GENERARE DAL SERVER API DEI DATI E INSERIRLI NELL'ARRAY
+
 	methods: {
             getRandomEmail(){
             for (let i = 0; i < 10 ; i++) {
@@ -35,6 +40,9 @@ const app = Vue.createApp({
             }          
             } 
 	},
+
+	// TRAMITE CREATED FAR SI CHE IL METODO VENGA ESEGUITO ALL'AVVIO DELLA PAGINA
+
 	created() {
 		this.getRandomEmail();
 	},

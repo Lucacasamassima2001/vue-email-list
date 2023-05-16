@@ -5,10 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>[v-cloak]{display: none;}</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="app">
-		<div v-for="Email in randomMail">{{ Email }}</div>
+	<div id="app" v-cloak>
+		<div class="emails" v-if="randomMail.length === 10">
+			<h1>Your E-Mails :</h1>
+			<div class="email" v-for="Email in randomMail">{{ Email }}
+			</div>
+		</div>
 	</div>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
