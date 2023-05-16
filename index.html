@@ -10,11 +10,11 @@
 </head>
 <body>
 	<div id="app" v-cloak>
-		<div class="emails" v-if="randomMail.length === 10">
+		<ul class="emails" v-if="randomMail.length === 10">
 			<h1>Your E-Mails :</h1>
-			<div class="email" v-for="Email in randomMail">{{ Email }}
-			</div>
-		</div>
+			<li class="email" v-for="Email in randomMail">{{ Email }}
+			</li>
+		</ul>
 	</div>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
