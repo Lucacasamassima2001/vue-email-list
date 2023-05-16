@@ -10,9 +10,9 @@
 </head>
 <body>
 	<div id="app" v-cloak>
-		<ul class="emails" v-if="randomMail.length === 10">
+		<ul class="emails" v-show="randomMail.length === 10">
 			<h1>Your E-Mails :</h1>
-			<li class="email" v-for="Email in randomMail">{{ Email }}
+			<li class="email" @click="removeEmail(i)"  v-for="(Email, i)  in randomMail">{{ Email }}
 			</li>
 		</ul>
 	</div>

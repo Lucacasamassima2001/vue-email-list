@@ -19,6 +19,7 @@ body{
     color: white;
     padding: 1em;
     border: 2px solid white;
+    border-radius: 20px;
 }
 
 h1{
@@ -28,4 +29,14 @@ h1{
 .email{
     margin-bottom: 1em;
     margin-left: .5em;
+}
+
+.email:hover{
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
 }

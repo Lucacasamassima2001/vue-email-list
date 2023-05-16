@@ -38,8 +38,19 @@ const app = Vue.createApp({
             for (let i = 0; i < 10 ; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(serverRandom => this.randomMail.push(serverRandom.data.response))
             }          
-            } 
-	},
+            },
+
+
+			
+			removeEmail(i){
+				this.randomMail.splice(i,1)
+				this.randomMail.length = 10
+			}
+
+
+	},		
+
+
 
 	// TRAMITE CREATED FAR SI CHE IL METODO VENGA ESEGUITO ALL'AVVIO DELLA PAGINA
 
